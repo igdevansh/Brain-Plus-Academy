@@ -20,45 +20,6 @@ import validationSchema from "../../utils/teacherstudentSchema";
 const entryImg = require("../../assets/images/Frame.png");
 
 const StudentSignin = () => {
-  const router = useRouter();
-  //   const auth = getAuth();
-  //   const db = getFirestore();
-
-  //   const handleSignin = async (values) => {
-  //     try {
-  //       const userCredentials = await createUserWithEmailAndPassword(
-  //         auth,
-  //         values.email,
-  //         values.password
-  //       );
-  //       const user = userCredentials.user;
-
-  //       await setDoc(doc(db, "users", user.uid), {
-  //         email: values.email,
-  //         createdAt: new Date(),
-  //       });
-
-  //       await AsyncStorage.setItem("userEmail", values.email);
-  //       await AsyncStorage.setItem("isGuest", "false");
-
-  //       router.push("/home");
-  //     } catch (error) {
-  //       if (error.code === "auth/email-already-in-use") {
-  //         Alert.alert(
-  //           "Signin Failed!",
-  //           "This email address is already in use. Please use a different email.",
-  //           [{ text: "OK" }]
-  //         );
-  //       } else {
-  //         Alert.alert(
-  //           "Signin Error",
-  //           "An unexpected error occurred. Please try again later.",
-  //           [{ text: "OK" }]
-  //         );
-  //       }
-  //     }
-  //   };
-
   return (
     <SafeAreaView className="bg-[#282C34] flex-1">
       <KeyboardAvoidingView
@@ -77,7 +38,7 @@ const StudentSignin = () => {
             <View className="m-1 flex justify-center items-center">
               <Image source={logo} style={{ width: 300, height: 200 }} />
               <Text className="text-lg text-center text-white font-bold mb-10">
-                Let&apos;s get you started
+                Student login
               </Text>
 
               <View className="w-5/6">

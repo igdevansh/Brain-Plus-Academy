@@ -10,8 +10,6 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../assets/images/dinetimelogo.png";
 const entryImg = require("../assets/images/Frame.png");
-import AsyncStorage from "@react-native-async-storage/async-storage";
-// const logo = require("../assets/images/dinetimelogo.png");
 export default function Index() {
   const router = useRouter();
 
@@ -22,13 +20,13 @@ export default function Index() {
           <Image source={logo} style={{ width: 300, height: 300 }} />
           <View className="w-3/4">
             <TouchableOpacity
-              onPress={() => router.push("/studentsignin")}
+              onPress={() => router.push("/studentdashboard")}
               className="p-2 my-2 bg-[#f49b33]  text-black rounded-lg "
             >
               <Text className="text-lg font-semibold text-center"> Student Sign in</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={()=> router.push("/teachersignin")}
+              onPress={()=> router.push("/teacherdashboard")}
               className="p-2 my-2 bg-[#282C34] border border-[#f49b33] rounded-lg max-w-fit "
             >
               <Text className="text-lg font-semibold text-[#f49b33] text-center">
@@ -36,12 +34,12 @@ export default function Index() {
               </Text>
             </TouchableOpacity>
           </View>
-          <View>
-            <Text className="text-center text-base  font-semibold my-4 text-white">
-              <View className="border-b-2 border-[#f49b33] p-2 mb-1 w-24" /> or{" "}
-              <View className="border-b-2 border-[#f49b33] p-2 mb-1 w-24" />
-            </Text>
-
+          <View className="w-3/4">
+            <View className="flex-row items-center my-4">
+              <View className="flex-1 h-px bg-[#f49b33]" />
+              <Text className="mx-4 font-semibold text-white">or</Text>
+              <View className="flex-1 h-px bg-[#f49b33]" />
+            </View>
             <TouchableOpacity
               className="flex flex-row justify-center items-center"
               onPress={() => router.push("/adminsignin")}
